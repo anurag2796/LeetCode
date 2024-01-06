@@ -1,4 +1,4 @@
-package strings.medium;
+package main.strings.medium;
 
 import java.util.LinkedList;
 import java.util.Queue;

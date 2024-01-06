@@ -1,4 +1,4 @@
-package dynamicProgramming.Hard;
+package main.dynamicProgramming;
 
 import java.util.*;
 

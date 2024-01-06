@@ -1,7 +1,6 @@
-import dynamicProgramming.Hard.MaximumProfitInJobScheduling;
-import strings.medium.LongestSubstring;
+import main.dynamicProgramming.MaximumProfitInJobScheduling;
+import main.strings.medium.LongestSubstring;
 
-import java.util.NoSuchElementException;
 import java.util.Queue;
 import java.util.LinkedList;
 
