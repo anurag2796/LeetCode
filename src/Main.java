@@ -1,3 +1,5 @@
+import strings.medium.LongestSubstring;
+
 import java.util.NoSuchElementException;
 import java.util.Queue;
 import java.util.LinkedList;
@@ -7,11 +9,11 @@ public class Main {
         System.out.println("Hello world!");
 
 
-        Main m = new Main();
-        System.out.println(m.lengthOfLongestSubstring("pwwkew")); //2
-        System.out.println(m.lengthOfLongestSubstring("bbbbb"));  //1
-        System.out.println(m.lengthOfLongestSubstring("asdfghjk"));  //8
-        System.out.println(m.lengthOfLongestSubstring("ksdkasdf"));  //5
+        LongestSubstring longestSubstring = new LongestSubstring();
+        System.out.println(longestSubstring.lengthOfLongestSubstring("pwwkew")); //2
+        System.out.println(longestSubstring.lengthOfLongestSubstring("bbbbb"));  //1
+        System.out.println(longestSubstring.lengthOfLongestSubstring("asdfghjk"));  //8
+        System.out.println(longestSubstring.lengthOfLongestSubstring("ksdkasdf"));  //5
 
     }
 
@@ -43,26 +45,5 @@ public class Main {
         }
         return max;
 
-    }
-
-    public int lengthOfLongestSubstring(String s) {
-        if (s.isEmpty())
-            return 0;
-        if (s.length() == 1)
-            return 1;
-        int max = 0;
-        int[] count = new int[256]; // Increased size to handle all ASCII characters
-        Queue<Character> q = new LinkedList<>();
-        for (int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
-            count[c]++;
-            q.add(c);
-            while (count[c] > 1) {
-                char removed = q.poll();
-                count[removed]--;
-            }
-            max = Math.max(max, q.size());
-        }
-        return max;
     }
 }
